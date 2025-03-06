@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgba(61, 82, 81, 0.311);
+}
+.Root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
