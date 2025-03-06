@@ -13,5 +13,40 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  align-items: center;
+  justify-content: center;
   
+}
+
+/* Cards */
+
+.Card-stack{
+  position: relative;
+  width: 320px;
+  height: 200px;
+}
+
+.Card{
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.Card-front{
+  transform: translateY(0);
+  opacity: 1;
+}
+.Card-back{
+  transform: translateY(-25px);
+  opacity: 1;
+}
+.Profile{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
 }

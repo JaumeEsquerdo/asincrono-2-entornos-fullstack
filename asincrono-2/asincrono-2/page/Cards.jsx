@@ -21,20 +21,24 @@ const Cards = () => {
 
         <div className="Card-stack">
             {cardsData.map((card, i) => (
-                <div key={card.id}
-                    className={`card ${i == activeIndex ? "card-front" : "card-back"}`}
-                    style={{ zIndex: cardsData.length - i }}
-                    onClick={handleNextCard}
-                >
-                    <h2>Introductions</h2>
-                    <div className="Profile">
-                        <h3>{card.name}</h3>
-                        <span>{card.time}</span>
+                i >= activeIndex && (
+                    <div key={card.id}
+                        className={`Card ${i === activeIndex ? "Card-front" : "Card-back"}`}
+
+                        style={{ zIndex: cardsData.length - i }}
+                        onClick={handleNextCard}
+                    >
+                        <h2>Introductions</h2>
+                        <div className="Profile">
+                            <h3>{card.name}</h3>
+                            <span>{card.time}</span>
+                        </div>
+                        <p>{card.message}</p>
+
+
                     </div>
-                    <p>{card.message}</p>
+                )
 
-
-                </div>
             ))}
 
         </div>
