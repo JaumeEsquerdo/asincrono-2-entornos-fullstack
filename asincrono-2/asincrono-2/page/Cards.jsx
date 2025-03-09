@@ -7,9 +7,11 @@ const cardsData = [
     { id: 4, name: "Javiera Dominguez", message: "Ayer no pude ir al encuentro porque me puse enfermo", time: "10:00" }
 ];
 
-const Cards = () => {
+export const Cards = () => {
 
     const [activeIndex, setActiveIndex] = useState(0);
+    const [expanded, setExpanded] = useState(false)
+    const [selectedCard, setSelectedCard] = useState(null)
 
     const handleNextCard = () => {
         if (activeIndex < cardsData.length - 1) {
@@ -17,12 +19,19 @@ const Cards = () => {
         }
     }
 
+    const handleExpand = (card)=>{
+        setExpanded(prev => !prev)
+        setSelectedCard(card)
+        
+    }
+
     return (
+        <main>
 
         <div className="Card-stack">
             {cardsData.map((card, i) => (
                 i >= activeIndex && (
-                    <div key={card.id}
+                    <div onclick={()=>handleExpand(card)} key={card.id}
                         className={`Card ${i === activeIndex ? "Card-front" : "Card-back"}`}
 
                         style={{ zIndex: cardsData.length - i }}
@@ -34,15 +43,25 @@ const Cards = () => {
                             <span>{card.time}</span>
                         </div>
                         <p>{card.message}</p>
-
-
                     </div>
                 )
 
             ))}
 
         </div>
+
+        {expanded && <CardAbierta card={selectedCard} setExpanded={setExpanded}/>}
+        </main>
+
     );
 }
 
-export default Cards;
+export const CardAbierta = ({card, setExpanded}) => {
+    return ( 
+        <div>
+            <h2>{card.name}</h2>
+            <button onClick={()=> setExpanded(false)}>X</button>
+        </div>
+     );
+}
+
