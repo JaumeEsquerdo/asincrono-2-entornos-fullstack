@@ -1,4 +1,4 @@
-import Cards from "../page/Cards"
+import {Cards} from "../page/Cards"
 import './css/Cards.css'
 
 function App() {
