@@ -28,6 +28,10 @@ export const Cards = () => {
     const [selectedCard, setSelectedCard] = useState(null)
     const [touchStartX, setTouchStartX] = useState(null)
     const [archivedMessages, setArchiveMessages] = useState([])
+    const [exitingCard, setExitingCard] = useState(null)
+    const [exitDirection, setExitDirection] = useState(null) //izq o derecha
+    const [isAnimating, setIsAnimating] = useState(false)
+
 
     // const handleNextCard = () => {
     //     if (activeIndex < cardsData.length - 1) {
@@ -47,20 +51,49 @@ export const Cards = () => {
 
     // capturar el final del toque y mirar dirección
     const handleTouchEnd = (e) => {
-        if (!touchStartX) return;
+        if (!touchStartX || isAnimating) return; // evita q funcione si ya está en animacion
+
+
         // obtiene la posición X del dedo en la pantalla que se ha levantado
         const touchEndX = e.changedTouches[0].clientX;
         const diff = touchStartX - touchEndX
 
         // si el desliz pasa de 50 (umbral para q actue) y cumple lo otro avanza al hacer desliz a la izq
-        if (diff > 50 && activeIndex < cardsData.length - 1) {
+        if (diff > 50
+            &&
+            activeIndex < cardsData.length - 1
+        ) {
 
             const archiveCard = cardsData[activeIndex]
-            setArchiveMessages(prev => [...prev, archiveCard])
-            setActiveIndex(activeIndex + 1)
+
+            setIsAnimating(true) //bloquea interacción
+            setExitingCard(archiveCard.id);
+            setExitDirection("left")
+
+            setTimeout(() => {
+                setArchiveMessages(prev => [...prev, archiveCard])
+                setActiveIndex(prev => prev + 1)
+                setExitingCard(null)
+                setExitDirection(null)
+                setIsAnimating(false)
+            }, 500) //tiempo de espera  a ejecutar
+
+
         } else if (diff < -50 && activeIndex < cardsData.length - 1) {
+            if (isAnimating) return;
+
             // al deslizar a la derecha avanza solamente
-            setActiveIndex(activeIndex + 1)
+            setExitingCard(cardsData[activeIndex].id)
+            setExitDirection("right")
+            setIsAnimating(true)
+
+            setTimeout(() => {
+                setActiveIndex(prev => prev + 1)
+                setExitingCard(null)
+                setExitDirection(null)
+                setIsAnimating(false)
+
+            }, 500)
         }
 
         //devolver la posición al levantar los dedos a null
@@ -75,6 +108,7 @@ export const Cards = () => {
             setActiveIndex(i);
         } else {
             setExpanded(false)
+            setSelectedCard(null) // para que se pueda volver a abrir
         }
     };
 
@@ -95,7 +129,7 @@ export const Cards = () => {
                 {cardsData.filter(card => !archivedMessages.some(archived => archived.id == card.id)).map((card, i) => (
                     i >= activeIndex && (
                         <div onClick={() => handleCardClick(card, i)} key={card.id}
-                            className={`Card ${i === activeIndex ? "Card-front" : "Card-back"}`}
+                            className={`Card ${i === activeIndex ? "Card-front" : "Card-back"} ${exitingCard == card.id ? `Exiting-${exitDirection}` : ""}`}
 
                             style={{ zIndex: cardsData.length - i }}
                         >
@@ -107,9 +141,7 @@ export const Cards = () => {
                             <p>{card.message}</p>
                         </div>
                     )
-
                 ))}
-
             </div>
 
             {expanded && <CardAbierta card={selectedCard} setExpanded={setExpanded} />}
