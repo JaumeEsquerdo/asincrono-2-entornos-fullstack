@@ -153,6 +153,12 @@ export const Cards = () => {
 }
 
 export const CardAbierta = ({ card, setExpanded }) => {
+
+    const [replyMessage, setReplyMessage] = useState("");
+
+    const handleReplyMessage = (e) => {
+        setReplyMessage(e.target.value);
+    }
     return (
         <div className="CardAbierta">
             <div className="Profile"></div>
@@ -166,6 +172,12 @@ export const CardAbierta = ({ card, setExpanded }) => {
                         <span>{msg.time}</span>
                     </div>
                 ))}
+            </div>
+
+            {/* input para el nuevo mensaje del reply */}
+            <div className="ReplySection">
+                <textarea value={replyMessage} onChange={handleReplyMessage} rows={10} cols={50} placeholder="Escribe tu respuesta..."/>
+                <button>Enviar</button>
             </div>
         </div>
     );
