@@ -1,5 +1,4 @@
-import {Cards} from "../page/Cards"
-import './css/Cards.css'
+import TriageWeb from "../page/TriageWeb"
 
 function App() {
 
