@@ -1,4 +1,4 @@
-import {Link} from 'react'
+import { Link } from 'react'
 
 const TriageWeb = () => {
     return (
@@ -15,7 +15,7 @@ const TriageWeb = () => {
                 <img src="" alt="App" />
 
             </header>
-            <section>
+            <section className='Feature Feature--dragLeft'>
                 <img src="" alt="" />
 
                 <div>
@@ -27,7 +27,7 @@ const TriageWeb = () => {
                 </div>
 
             </section>
-            <section>
+            <section className='Feature Feature--dragRight'>
                 <div>
                     <img src="" alt="" />
                     <h2>Drag right to keep
@@ -39,25 +39,25 @@ const TriageWeb = () => {
 
 
             </section>
-            <section>
+            <section className='Feature Feature--tap'>
                 <img src="" alt="" />
 
                 <div>
                     <img src="" alt="" />
                     <h2>Tap to expand</h2>
                     <p>Open the message to
-                    view the whole thread.</p>
+                        view the whole thread.</p>
                 </div>
 
             </section>
-            <section>
+            <section className='Feature Feature--reply'>
                 <div>
                     <img src="" alt="" />
                     <h2>Reply in context
 
                     </h2>
                     <p>Send a quick reply without leaving the
-                    app.
+                        app.
                     </p>
                 </div>
                 <img src="" alt="" />
@@ -65,78 +65,111 @@ const TriageWeb = () => {
 
             </section>
 
-            <section>
+            <section className='Featur-info'>
                 <div>
                     <div>
                         <img src="" alt="" />
                     </div>
-                    <h3></h3>
+                    <h3>Works with Gmail,
+
+                        iCloud & IMAP</h3>
                 </div>
                 <div>
                     <div>
                         <img src="" alt="" />
                     </div>
-                    <h3></h3>
+                    <h3>All processing
+
+                        happens on device
+                    </h3>
                 </div>
                 <div>
                     <div>
                         <img src="" alt="" />
                     </div>
-                    <h3></h3>
+                    <h3>Your data is
+
+                        yours to stay</h3>
                 </div>
                 <div>
                     <div>
                         <img src="" alt="" />
                     </div>
-                    <h3></h3>
+                    <h3>Supports
+
+                        dark mode</h3>
                 </div>
                 <div>
                     <div>
                         <img src="" alt="" />
                     </div>
-                    <h3></h3>
+                    <h3>Free to use. Or pay
+
+                        for more features.</h3>
                 </div>
                 <div>
                     <div>
                         <img src="" alt="" />
                     </div>
-                    <h3></h3>
+                    <h3>Built & maintained
+
+                        by indie developers</h3>
                 </div>
             </section>
 
-            <footer>
-                <div>
-                    <p></p>
+            <footer className='Footer'>
+                <div className='Feature-testimonials'>
+                    <p>Since I’ve been using
+                        Triage, I’m more caught
+                        up on my email than I
+                        have been in years.
+                    </p>
                     <img src="" alt="" />
                 </div>
                 <div>
-                    <p></p>
+                    <p>If you re constantly
+                        battling to keep your email
+                        account at inbox zero,
+                        Triage for iOS could be
+                        worth a look.</p>
                     <img src="" alt="" />
                 </div>
                 <div>
-                    <p></p>
+                    <p>Triage makes it feel
+                        seamless, and even fun,
+                        to achieve if not Inbox
+                        Zero at least Inbox Zen.
+                    </p>
                     <img src="" alt="" />
                 </div>
                 <div>
-                    <p></p>
+                    <p>Triage provides the first
+                        aid necessary to get your
+                        inbox back in fighting
+                        shape.
+                    </p>
                     <img src="" alt="" />
                 </div>
                 <div>
-                    <p></p>
+                    <p>Triage is a boon to those
+                        who have struggled to
+                        keep their inboxes clean
+                        and organized.</p>
                     <img src="" alt="" />
                 </div>
                 <div>
-                    <p></p>
+                    <p>Triage is my new favorite
+                        email app for iPhone.</p>
                     <img src="" alt="" />
                 </div>
 
-                <nav>
+                <nav className='Footer-nav'>
                     <Link>FAQ</Link>
                     <Link>Privacy</Link>
                     <Link>Terms</Link>
                     <Link>Security</Link>
 
-                    <div>
+                    <div className='Footer-rrss'>
                         <img src="" alt="" />
                         <img src="" alt="" />
                     </div>

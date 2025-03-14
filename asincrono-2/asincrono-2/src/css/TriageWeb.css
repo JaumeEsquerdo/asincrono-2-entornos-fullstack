@@ -1,21 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.Root,.Body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .Color1{
     background-color: #007AFF;
 }
-.Color2{
+.Feature--dragLeft{
     background-color: #FF2D55;
 }
-.Color3{
+.Feature--dragRight{
     background-color: #000000;
 }
-.Color4{
+.Feature--tap{
     background-color: #FFB800;
 }
-.Color1{
+.Feature--reply{
     background-color: #7000FF;
 }
-.Color1{
+.Feature-info{
     background-color: #F2F2F2;
 }
-.Color1{
+.Feature-testimonials{
     background-color: #FFFFFF;
+}
+
+.Feature{
+    height: 800px;
 }
