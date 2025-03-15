@@ -1,0 +1,7 @@
+export const PORT=process.env.PORT  || 3000; 
+export const DOMAIN= process.env.DOMAIN || "http://localhost"
+
+export const DB_USER= process.env.DB_USER ||"jaumeesquerdo"
+export const DB_PASS = process.env.DB_PASS ||"I6SlwoOlJS3nxKSt"
+export const DB_CLUSTER = process.env.DB_CLUSTER ||"cei-valencia-mongodb-pr.qlgcw.mongodb.net"
+export const DATABASE = process.env.DATABASE ||"sample_mflix"
