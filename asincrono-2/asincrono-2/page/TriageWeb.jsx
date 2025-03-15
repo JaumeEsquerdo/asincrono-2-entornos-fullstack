@@ -1,14 +1,40 @@
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react';
 
 const TriageWeb = () => {
+
+    const backendURL = import.meta.env.VITE_BACKEND;
+
+    const [opiniones, setOpiniones] = useState([])
+
+    useEffect(() => {
+        const obtenerOpiniones = async () => {
+            try {
+                const response = await fetch(`${backendURL}/api/v1/opinions`)
+                console.log('respuesta del fetch de obtener opiniones', response)
+
+                if (!response.ok) {
+                    throw new Error('error al obtener los datos de opinions')
+                }
+
+                const data = await response.json()
+
+                setOpiniones(data.data)
+            } catch (e) {
+                console.error('error en try de obtener opiniones', e)
+            }
+        }
+
+        obtenerOpiniones()
+    }, [])
     return (
         <div className="TriageWeb">
             <header className="TriageWeb-header">
                 <div className='Header-div'>
                     <div className='Header-info'>
                         <img className='Header-logo' src="/img/hero.svg.png" alt="hero" />
-                        <h1 style={{color:"white"}}>Triage is first aid for your inbox.</h1>
-                        <p style={{color:"#ffffff9a", margin:"20px 0"}}>Everything you loved about the
+                        <h1 style={{ color: "white" }}>Triage is first aid for your inbox.</h1>
+                        <p style={{ color: "#ffffff9a", margin: "20px 0" }}>Everything you loved about the
                             original Triage is back – only better.
                             Download Triage 2 on the App Store
                             today.</p>
@@ -26,8 +52,8 @@ const TriageWeb = () => {
 
                     <div className='Feature-info'>
                         <img className='Feature-logo' src="/img/svg.png" alt="drag left" />
-                        <h2 style={{color:"white" , margin:"20px 0"}}>Drag left to archive</h2>
-                        <p style={{color:"#ffffff9a"}}>Unread messages appear
+                        <h2 style={{ color: "white", margin: "20px 0" }}>Drag left to archive</h2>
+                        <p style={{ color: "#ffffff9a" }}>Unread messages appear
                             in a stack of cards, like
                             this.</p>
                     </div>
@@ -39,9 +65,9 @@ const TriageWeb = () => {
                 <div className='Header-div'>
                     <div className='Feature-info'>
                         <img className='Feature-logo' src="/img/svg1.png" alt="keep email" />
-                        <h2 style={{color:"white", margin:"20px 0"}}>Drag right to keep
+                        <h2 style={{ color: "white", margin: "20px 0" }}>Drag right to keep
                         </h2>
-                        <p style={{color:"#ffffff9a"}}>Or create your own custom workflow.
+                        <p style={{ color: "#ffffff9a" }}>Or create your own custom workflow.
                         </p>
                     </div>
                     <img className='ImgEmail-bottom' src="/img/keep.png.png" alt="keep" />
@@ -56,22 +82,22 @@ const TriageWeb = () => {
 
                     <div className='Feature-info'>
                         <img className='Feature-logo' src="/img/Frame.png" alt="expand" />
-                        <h2 style={{margin:"20px 0"}}>Tap to expand</h2>
-                        <p style={{color:"#00000098"}}>Open the message to
+                        <h2 style={{ margin: "20px 0" }}>Tap to expand</h2>
+                        <p style={{ color: "#00000098" }}>Open the message to
                             view the whole thread.</p>
                     </div>
                 </div>
 
-            
+
             </section>
             <section className='Feature Feature--reply'>
                 <div className='Header-div'>
                     <div className='Feature-info'>
                         <img className='Feature-logo' src="/img/Frame1.png" alt="reply img" />
-                        <h2 style={{color:"white", margin:"20px 0"}}>Reply in context
+                        <h2 style={{ color: "white", margin: "20px 0" }}>Reply in context
 
                         </h2>
-                        <p style={{color:"#ffffff9a"}}>Send a quick reply without leaving the
+                        <p style={{ color: "#ffffff9a" }}>Send a quick reply without leaving the
                             app.
                         </p>
                     </div>
@@ -143,58 +169,41 @@ const TriageWeb = () => {
                 <div className='Footer-div'>
 
                     <div className='Feature-testimonials'>
-                        <p>Since I’ve been using
-                            Triage, I’m more caught
-                            up on my email than I
-                            have been in years.
+                        <p>{opiniones[0]?.opinion}
                         </p>
                         <img src="/img/daring-fireball.png.png" alt="daring fireball img" />
                     </div>
                     <div className='Feature-testimonials'>
-                        <p>If you re constantly
-                            battling to keep your email
-                            account at inbox zero,
-                            Triage for iOS could be
-                            worth a look.</p>
+                        <p>{opiniones[1]?.opinion}</p>
                         <img src="/img/the-verge.svg.png" alt="the verge img" />
                     </div>
                     <div className='Feature-testimonials'>
-                        <p>Triage makes it feel
-                            seamless, and even fun,
-                            to achieve if not Inbox
-                            Zero at least Inbox Zen.
+                        <p>{opiniones[2]?.opinion}
                         </p>
                         <img src="/img/macworld.svg.png" alt="macworld img" />
                     </div>
                     <div className='Feature-testimonials'>
-                        <p>Triage provides the first
-                            aid necessary to get your
-                            inbox back in fighting
-                            shape.
+                        <p>{opiniones[3]?.opinion}
                         </p>
                         <img src="/img/maclife.png.png" alt="maclife img" />
                     </div>
                     <div className='Feature-testimonials'>
-                        <p>Triage is a boon to those
-                            who have struggled to
-                            keep their inboxes clean
-                            and organized.</p>
+                        <p>{opiniones[4]?.opinion}</p>
                         <img src="/img/clean-email.png.png" alt="clean email img" />
                     </div>
                     <div className='Feature-testimonials'>
-                        <p>Triage is my new favorite
-                            email app for iPhone.</p>
+                        <p>{opiniones[5]?.opinion}</p>
                         <img src="/img/macstories.png.png" alt="macstories img" />
                     </div>
                 </div>
                 <nav className='Footer-nav'>
                     <div>
-                    <Link className='Footer-link'>FAQ</Link>
-                    <Link className='Footer-link'>Privacy</Link>
-                    <Link className='Footer-link'>Terms</Link>
-                    <Link className='Footer-link'>Security</Link>
+                        <Link className='Footer-link'>FAQ</Link>
+                        <Link className='Footer-link'>Privacy</Link>
+                        <Link className='Footer-link'>Terms</Link>
+                        <Link className='Footer-link'>Security</Link>
                     </div>
-                    
+
 
                     <div className='Footer-rrss'>
                         <img className='Rrss-img' src="/img/svg5.png" alt="email" />
