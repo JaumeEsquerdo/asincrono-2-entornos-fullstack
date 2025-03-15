@@ -43,12 +43,18 @@
     justify-content: center;
 }
 
-.Header-info {
+.Header-info,.Feature-info {
     width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+.Feature-logo{
+    width: 40px;
+}
+/* .Feature-info{
+
+} */
 
 .ImgEmail-top{
     height: auto;

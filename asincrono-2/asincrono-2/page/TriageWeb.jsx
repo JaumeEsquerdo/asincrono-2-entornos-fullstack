@@ -7,8 +7,8 @@ const TriageWeb = () => {
                 <div className='Header-div'>
                     <div className='Header-info'>
                         <img className='Header-logo' src="/img/hero.svg.png" alt="hero" />
-                        <h1 className="">Triage is first aid for your inbox.</h1>
-                        <p>Everything you loved about the
+                        <h1 style={{color:"white"}}>Triage is first aid for your inbox.</h1>
+                        <p style={{color:"#ffffff9a", margin:"20px 0"}}>Everything you loved about the
                             original Triage is back – only better.
                             Download Triage 2 on the App Store
                             today.</p>
@@ -24,10 +24,10 @@ const TriageWeb = () => {
                 <div className='Header-div'>
                     <img className='ImgEmail-bottom' src="/img/archive.png.png" alt="email drag left" />
 
-                    <div>
-                        <img src="/img/svg.png" alt="drag left" />
-                        <h2>Drag left to archive</h2>
-                        <p>Unread messages appear
+                    <div className='Feature-info'>
+                        <img className='Feature-logo' src="/img/svg.png" alt="drag left" />
+                        <h2 style={{color:"white" , margin:"20px 0"}}>Drag left to archive</h2>
+                        <p style={{color:"#ffffff9a"}}>Unread messages appear
                             in a stack of cards, like
                             this.</p>
                     </div>
@@ -37,11 +37,11 @@ const TriageWeb = () => {
             </section>
             <section className='Feature Feature--dragRight'>
                 <div className='Header-div'>
-                    <div>
-                        <img src="/img/svg1.png" alt="keep email" />
-                        <h2>Drag right to keep
+                    <div className='Feature-info'>
+                        <img className='Feature-logo' src="/img/svg1.png" alt="keep email" />
+                        <h2 style={{color:"white", margin:"20px 0"}}>Drag right to keep
                         </h2>
-                        <p>Or create your own custom workflow.
+                        <p style={{color:"#ffffff9a"}}>Or create your own custom workflow.
                         </p>
                     </div>
                     <img className='ImgEmail-bottom' src="/img/keep.png.png" alt="keep" />
@@ -54,24 +54,24 @@ const TriageWeb = () => {
                 <div className='Header-div'>
                     <img className='ImgEmail-top' src="/img/expand.png.png" alt="expand email" />
 
-                    <div>
-                        <img src="/img/Frame.png" alt="expand" />
-                        <h2>Tap to expand</h2>
+                    <div className='Feature-info'>
+                        <img className='Feature-logo' src="/img/Frame.png" alt="expand" />
+                        <h2 >Tap to expand</h2>
                         <p>Open the message to
                             view the whole thread.</p>
                     </div>
                 </div>
 
-
+            
             </section>
             <section className='Feature Feature--reply'>
                 <div className='Header-div'>
-                    <div>
-                        <img src="/img/Frame1.png" alt="reply img" />
-                        <h2>Reply in context
+                    <div className='Feature-info'>
+                        <img className='Feature-logo' src="/img/Frame1.png" alt="reply img" />
+                        <h2 style={{color:"white", margin:"20px 0"}}>Reply in context
 
                         </h2>
-                        <p>Send a quick reply without leaving the
+                        <p style={{color:"#ffffff9a"}}>Send a quick reply without leaving the
                             app.
                         </p>
                     </div>
@@ -85,8 +85,8 @@ const TriageWeb = () => {
             <section className='Info'>
                 <div className='Info-container'>
                     <div className='Info-div work'>
-                        <div>
-                            <img src="/img/svg2.png" alt="work img" />
+                        <div >
+                            <img className='Feature-logo' src="/img/svg2.png" alt="work img" />
                         </div>
                         <h3 className='Info-h3--white'>Works with Gmail,
 
@@ -103,7 +103,7 @@ const TriageWeb = () => {
                     </div>
                     <div className='Info-div data'>
                         <div>
-                            <img src="/img/svg3.png" alt="data img" />
+                            <img className='Feature-logo' src="/img/svg3.png" alt="data img" />
                         </div>
                         <h3 className='Info-h3--white'>Your data is
 
