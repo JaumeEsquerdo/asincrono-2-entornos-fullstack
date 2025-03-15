@@ -10,6 +10,6 @@ POST {{dominio}}/api/v1/opinions
 Content-Type: application/json
 
 {
-    "name":"",
-    "opinion": ""
+    "name":"MacStories",
+    "opinion": "Triage is my new favorite email app for iPhone."
 }

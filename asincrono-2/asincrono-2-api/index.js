@@ -26,7 +26,7 @@ app.get("/", (req,res)=>{
     res.send('Asíncrono 2 con mongo')
 })
 
-app.use("api/v1", router)
+app.use("/api/v1", router)
 
 app.listen(PORT, ()=>{
     console.log(`servidor funcionando en ${DOMAIN}:${PORT}`)
