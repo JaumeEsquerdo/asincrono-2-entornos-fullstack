@@ -56,8 +56,8 @@ const TriageWeb = () => {
 
                     <div className='Feature-info'>
                         <img className='Feature-logo' src="/img/Frame.png" alt="expand" />
-                        <h2 >Tap to expand</h2>
-                        <p>Open the message to
+                        <h2 style={{margin:"20px 0"}}>Tap to expand</h2>
+                        <p style={{color:"#00000098"}}>Open the message to
                             view the whole thread.</p>
                     </div>
                 </div>
