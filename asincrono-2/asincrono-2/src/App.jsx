@@ -1,4 +1,4 @@
-import TriageWeb from "../page/TriageWeb"
+import TriageWeb from "../page/TriageWeb.jsx"
 import './css/TriageWeb.css'
 
 function App() {

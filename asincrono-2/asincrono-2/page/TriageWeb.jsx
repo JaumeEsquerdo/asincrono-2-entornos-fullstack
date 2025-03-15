@@ -1,25 +1,26 @@
-import { Link } from 'react'
+import { Link } from 'react-router-dom'
 
 const TriageWeb = () => {
     return (
         <div className="TriageWeb">
             <header className="TriageWeb-header">
                 <div>
+                    <img src="/img/hero.svg.png" alt="hero" />
                     <h1 className="">Triage is first aid for your inbox.</h1>
                     <p>Everything you loved about the
                         original Triage is back – only better.
                         Download Triage 2 on the App Store
                         today.</p>
-                    <img src="" alt="Boton" />
+                    <img src="/img/download.svg.png" alt="Boton" />
                 </div>
-                <img src="" alt="App" />
+                <img src="/img/hero.png.png" alt="App" />
 
             </header>
             <section className='Feature Feature--dragLeft'>
-                <img src="" alt="" />
+                <img src="/img/archive.png.png" alt="email drag left" />
 
                 <div>
-                    <img src="" alt="" />
+                    <img src="/img/svg.png" alt="drag left" />
                     <h2>Drag left to archive</h2>
                     <p>Unread messages appear
                         in a stack of cards, like
@@ -29,21 +30,21 @@ const TriageWeb = () => {
             </section>
             <section className='Feature Feature--dragRight'>
                 <div>
-                    <img src="" alt="" />
+                    <img src="/img/svg1.png" alt="keep email" />
                     <h2>Drag right to keep
                     </h2>
                     <p>Or create your own custom workflow.
                     </p>
                 </div>
-                <img src="" alt="" />
+                <img src="/img/keep.png.png" alt="keep" />
 
 
             </section>
             <section className='Feature Feature--tap'>
-                <img src="" alt="" />
+                <img src="/img/expand.png.png" alt="expand email" />
 
                 <div>
-                    <img src="" alt="" />
+                    <img src="/img/Frame.png" alt="expand" />
                     <h2>Tap to expand</h2>
                     <p>Open the message to
                         view the whole thread.</p>
@@ -52,7 +53,7 @@ const TriageWeb = () => {
             </section>
             <section className='Feature Feature--reply'>
                 <div>
-                    <img src="" alt="" />
+                    <img src="/img/Frame1.png" alt="reply img" />
                     <h2>Reply in context
 
                     </h2>
@@ -60,7 +61,7 @@ const TriageWeb = () => {
                         app.
                     </p>
                 </div>
-                <img src="" alt="" />
+                <img src="/img/reply.png.png" alt="reply email" />
 
 
             </section>
@@ -68,7 +69,7 @@ const TriageWeb = () => {
             <section className='Featur-info'>
                 <div>
                     <div>
-                        <img src="" alt="" />
+                        <img src="/img/svg2.png" alt="work img" />
                     </div>
                     <h3>Works with Gmail,
 
@@ -76,7 +77,7 @@ const TriageWeb = () => {
                 </div>
                 <div>
                     <div>
-                        <img src="" alt="" />
+                        <img src="/img/svg5.png" alt="process img" />
                     </div>
                     <h3>All processing
 
@@ -85,7 +86,7 @@ const TriageWeb = () => {
                 </div>
                 <div>
                     <div>
-                        <img src="" alt="" />
+                        <img src="/img/svg3.png" alt="data img" />
                     </div>
                     <h3>Your data is
 
@@ -93,7 +94,7 @@ const TriageWeb = () => {
                 </div>
                 <div>
                     <div>
-                        <img src="" alt="" />
+                        <img src="/img/Frame3.png" alt="support img" />
                     </div>
                     <h3>Supports
 
@@ -101,7 +102,7 @@ const TriageWeb = () => {
                 </div>
                 <div>
                     <div>
-                        <img src="" alt="" />
+                        <img src="/img/svg4.png" alt="free to use img" />
                     </div>
                     <h3>Free to use. Or pay
 
@@ -109,7 +110,7 @@ const TriageWeb = () => {
                 </div>
                 <div>
                     <div>
-                        <img src="" alt="" />
+                        <img src="/img/Frame4.png" alt="built img" />
                     </div>
                     <h3>Built & maintained
 
@@ -124,7 +125,7 @@ const TriageWeb = () => {
                         up on my email than I
                         have been in years.
                     </p>
-                    <img src="" alt="" />
+                    <img src="/img/daring-fireball.png.png" alt="daring fireball img" />
                 </div>
                 <div>
                     <p>If you re constantly
@@ -132,7 +133,7 @@ const TriageWeb = () => {
                         account at inbox zero,
                         Triage for iOS could be
                         worth a look.</p>
-                    <img src="" alt="" />
+                    <img src="/img/the-verge.svg.png" alt="the verge img" />
                 </div>
                 <div>
                     <p>Triage makes it feel
@@ -140,7 +141,7 @@ const TriageWeb = () => {
                         to achieve if not Inbox
                         Zero at least Inbox Zen.
                     </p>
-                    <img src="" alt="" />
+                    <img src="/img/macworld.svg.png" alt="macworld img" />
                 </div>
                 <div>
                     <p>Triage provides the first
@@ -148,19 +149,19 @@ const TriageWeb = () => {
                         inbox back in fighting
                         shape.
                     </p>
-                    <img src="" alt="" />
+                    <img src="/img/maclife.png.png" alt="maclife img" />
                 </div>
                 <div>
                     <p>Triage is a boon to those
                         who have struggled to
                         keep their inboxes clean
                         and organized.</p>
-                    <img src="" alt="" />
+                    <img src="/img/clean-email.png.png" alt="clean email img" />
                 </div>
                 <div>
                     <p>Triage is my new favorite
                         email app for iPhone.</p>
-                    <img src="" alt="" />
+                    <img src="/img/macstories.png.png" alt="macstories img" />
                 </div>
 
                 <nav className='Footer-nav'>
@@ -170,8 +171,8 @@ const TriageWeb = () => {
                     <Link>Security</Link>
 
                     <div className='Footer-rrss'>
-                        <img src="" alt="" />
-                        <img src="" alt="" />
+                        <img src="/img/svg5.png" alt="email" />
+                        <img src="/img/Frame5.png" alt="twitter" />
                     </div>
                 </nav>
 
