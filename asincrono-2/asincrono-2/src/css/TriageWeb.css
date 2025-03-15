@@ -38,3 +38,37 @@
 .Feature{
     height: 800px;
 }
+
+
+/* seccion de info */
+.Info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #F2F2F2;
+}
+.Info-div{
+    background-color: azure;
+    border-radius: 20px;
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+}
+
+.work{
+    background-color: #007AFF;
+}
+.processing{
+    background-color: #FFB800;
+}
+.data{
+    background-color: #FF2D55;
+}
+.dark{
+    background-color: #000000;
+}
+.free{
+    background-color: #7000FF;
+}
+.build{
+    background-color: #FFFFFF;
+}

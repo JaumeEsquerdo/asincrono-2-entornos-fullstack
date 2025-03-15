@@ -66,8 +66,8 @@ const TriageWeb = () => {
 
             </section>
 
-            <section className='Featur-info'>
-                <div>
+            <section className='Info'>
+                <div className='Info-div work'>
                     <div>
                         <img src="/img/svg2.png" alt="work img" />
                     </div>
@@ -75,7 +75,7 @@ const TriageWeb = () => {
 
                         iCloud & IMAP</h3>
                 </div>
-                <div>
+                <div  className='Info-div processing'>
                     <div>
                         <img src="/img/svg5.png" alt="process img" />
                     </div>
@@ -84,7 +84,7 @@ const TriageWeb = () => {
                         happens on device
                     </h3>
                 </div>
-                <div>
+                <div  className='Info-div data'>
                     <div>
                         <img src="/img/svg3.png" alt="data img" />
                     </div>
@@ -92,7 +92,7 @@ const TriageWeb = () => {
 
                         yours to stay</h3>
                 </div>
-                <div>
+                <div  className='Info-div dark'>
                     <div>
                         <img src="/img/Frame3.png" alt="support img" />
                     </div>
@@ -100,7 +100,7 @@ const TriageWeb = () => {
 
                         dark mode</h3>
                 </div>
-                <div>
+                <div  className='Info-div free'>
                     <div>
                         <img src="/img/svg4.png" alt="free to use img" />
                     </div>
@@ -108,7 +108,7 @@ const TriageWeb = () => {
 
                         for more features.</h3>
                 </div>
-                <div>
+                <div  className='Info-div build'>
                     <div>
                         <img src="/img/Frame4.png" alt="built img" />
                     </div>
