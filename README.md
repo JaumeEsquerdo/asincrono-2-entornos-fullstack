@@ -11,3 +11,8 @@ Analizaremos la gestión de variables de entorno para optimizar tu flujo de trab
 · Archivo .env
 · Entorno en ReactJS con ViteJS
 · Entorno en ExpressJS 
+
+
+### Solución:
+
+En en el front. Todo el contenido importante de los asíncronos se encuentra en el archivo dentro de la carpeta 'pages' 'TriageWeb.jsx'
