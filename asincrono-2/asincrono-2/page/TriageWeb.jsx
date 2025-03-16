@@ -8,6 +8,9 @@ const TriageWeb = () => {
     const [opiniones, setOpiniones] = useState([])
 
     useEffect(() => {
+        const controller = new AbortController();
+        const signal = controller.signal;
+
         const obtenerOpiniones = async () => {
             try {
                 const response = await fetch(`${backendURL}/api/v1/opinions`)
@@ -21,11 +24,22 @@ const TriageWeb = () => {
 
                 setOpiniones(data.data)
             } catch (e) {
-                console.error('error en try de obtener opiniones', e)
+                if (e.name === 'AbortError') {
+                    // por si es un error causado por cancelar la solicitud del 
+                    console.log('fetch ha sido cancelado por el abortcontroller', e)
+                } else {
+                    console.error('error en try de obtener opiniones', e)
+                }
             }
         }
 
         obtenerOpiniones()
+
+        //limpiar por si se desmonta el componente o se hace una nueva petición en el futuro
+        return () => {
+            controller.abort()
+        };
+
     }, [])
     return (
         <div className="TriageWeb">
