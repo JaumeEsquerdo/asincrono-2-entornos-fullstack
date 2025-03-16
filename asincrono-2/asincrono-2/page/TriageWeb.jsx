@@ -13,7 +13,7 @@ const TriageWeb = () => {
 
         const obtenerOpiniones = async () => {
             try {
-                const response = await fetch(`${backendURL}/api/v1/opinions`)
+                const response = await fetch(`${backendURL}/api/v1/opinions`, {signal})
                 console.log('respuesta del fetch de obtener opiniones', response)
 
                 if (!response.ok) {
