@@ -1,6 +1,6 @@
 import express from 'express';
 
-import {PORT, DOMAIN} from './config/config.js'
+import {PORT, BASE_URL} from './config/config.js'
 
 import {conectarDB} from './db/mongoose.js'
 
@@ -40,5 +40,5 @@ app.use((err, req, res, next)=>{
 })
 
 app.listen(PORT, ()=>{
-    console.log(`servidor funcionando en ${DOMAIN}:${PORT}`)
+    console.log(`servidor funcionando en ${BASE_URL}`)
 })

@@ -1,5 +1,6 @@
-export const PORT=process.env.PORT  || 3000; 
-export const DOMAIN= process.env.DOMAIN || "http://localhost"
+export const BASE_URL = process.env.BASE_URL || "http://localhost:3000"; // Valor por defecto para desarrollo
+
+export const PORT = process.env.PORT || 3000; // Usa el puerto de Vercel o 3000 en desarrollo
 
 export const DB_USER= process.env.DB_USER ||"jaumeesquerdo"
 export const DB_PASS = process.env.DB_PASS ||"I6SlwoOlJS3nxKSt"
