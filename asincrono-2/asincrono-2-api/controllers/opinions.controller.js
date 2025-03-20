@@ -18,7 +18,7 @@ export const getOpinions = async (req, res, next) =>{
         responseAPI.cant= opinions.length;
 
         res.status(200).json(responseAPI)
-        res.json("getOpinion 2")
+        //res.json("getOpinion 2")
     }catch(e){
         console.error('error en el try de getOpinions', e)
         next(e)

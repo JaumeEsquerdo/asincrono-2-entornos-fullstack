@@ -16,3 +16,7 @@ Analizaremos la gestión de variables de entorno para optimizar tu flujo de trab
 ### Solución:
 
 En en el front. Todo el contenido importante de los asíncronos se encuentra en el archivo dentro de la carpeta 'pages' 'TriageWeb.jsx'
+
+
+# Para conectar mongoDB con vercel
+`https://www.mongodb.com/developer/products/atlas/how-to-connect-mongodb-atlas-to-vercel-using-the-new-integration/`
