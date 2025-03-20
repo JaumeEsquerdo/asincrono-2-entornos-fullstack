@@ -8,7 +8,7 @@ const responseAPI = {
 }
 
 export const getOpinions = async (req, res, next) =>{
-
+        res.json("getOpinion")
     try{
         const opinions = await Opinion.find()
 
