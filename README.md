@@ -1,4 +1,4 @@
-# asincrono-backend-2
+# asincrono-fullstack-2
 
 Actividad asíncrona 2:
 
